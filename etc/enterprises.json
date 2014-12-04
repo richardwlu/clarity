@@ -1,0 +1,18 @@
+{
+    "enterprises": [
+        {
+            "decimal": 0,
+            "organization": "reserved",
+            "contact": "Internet Assigned Numbers Authority",
+            "email": "iana&iana.org"
+        },
+        {
+            "decimal": 1,
+            "organization": "NxNetworks",
+            "contact": "Michael Kellen",
+            "email": "OID.Admin&NxNetworks.com"
+        }
+    ]
+}
+
+{"enterprises":[{"decimal":0,"organization":"reserved","contact":"Internet Assigned Numbers Authority","email":"iana&iana.org"},{"decimal":1,"organization":"NxNetworks","contact":"Michael Kellen","email":"OID.Admin&NxNetworks.com"}]}
