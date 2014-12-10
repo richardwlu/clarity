@@ -19,13 +19,21 @@ var port = process.env.PORT || 4040; 		// set our port
 // =============================================================================
 var router = express.Router(); 				// get an instance of the express Router
 
-// test route to make sure everything is working
-router.get('/', function(req, res) {
+// GET: returns all enterprises
+router.get('/enterprises', function(req, res) {
+	console.log('GET request on /enterprises/' + req.params.decimal);
 	res.setHeader( "Access-Control-Allow-Origin", req.headers.origin );
 	res.json({"enterprises":[{"decimal":0,"organization":"reserved","contact":"Internet Assigned Numbers Authority","email":"iana&iana.org"},{"decimal":1,"organization":"NxNetworks","contact":"Michael Kellen","email":"OID.Admin&NxNetworks.com"}]});	
 });
 
-// more routes for our API will happen here
+// GET: returns a specific enterprise from the decimal
+router.get('/enterprises/:decimal', function(req,res) {
+	console.log('GET request on /enterprises/' + req.params.decimal);
+	res.setHeader( "Access-Control-Allow-Origin", req.headers.origin );
+	res.json({"enterprises":[{"decimal":0,"organization":"reserved","contact":"Internet Assigned Numbers Authority","email":"iana&iana.org"},{"decimal":1,"organization":"NxNetworks","contact":"Michael Kellen","email":"OID.Admin&NxNetworks.com"}]});
+});
+
+
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
